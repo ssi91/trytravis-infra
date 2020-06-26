@@ -1,7 +1,7 @@
 # ssi91_infra
 ssi91 Infra repository
 
-## HW #2
+## HW #3
 
 ### Для подключения к ВМ во внутренней сети черeз bastion одной командой:
 ```bash
@@ -21,3 +21,6 @@ Host someinternalhost
   User appuser
   IdentityFile ~/.ssh/appuser
 ```
+
+bastion_IP = 84.201.128.115
+someinternalhost_IP = 10.130.0.24
