@@ -24,3 +24,6 @@ Host someinternalhost
 
 bastion_IP = 84.201.128.115
 someinternalhost_IP = 10.130.0.24
+
+### Дополнительно
+Добавлен сертификат на сервер bastion, теперь сервер доступет по `https` по адресу https://84.201.128.115.sslip.io/
