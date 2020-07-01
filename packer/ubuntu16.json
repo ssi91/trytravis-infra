@@ -1,10 +1,15 @@
 {
+	"variables": {
+		"service_account_key_file": null,
+		"folder_id": null,
+		"source_image_family": "ubuntu-1604-lts"
+	},
 	"builders": [
 		{
 			"type": "yandex",
-			"service_account_key_file": "key.json",
-			"folder_id": "b1gk3lh4l14o2l4ujhc5",
-			"source_image_family": "ubuntu-1604-lts",
+			"service_account_key_file": "{{user `service_account_key_file`}}",
+			"folder_id": "{{user `folder_id`}}",
+			"source_image_family": "{{user `source_image_family`}}",
 			"image_name": "reddit-base-{{timestamp}}",
 			"image_family": "reddit-base",
 			"ssh_username": "ubuntu",
