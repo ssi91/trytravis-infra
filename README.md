@@ -47,3 +47,10 @@ yc compute instance create \
 --metadata serial-port-enable=1 \
 --metadata-from-file user-data=metadata.yaml
 ```
+
+## HW #5
+- Создан образ для reddit-app с необходимыми зависимостями для деплоя и работы приложения
+
+### Дополнительно
+- Создан baked образ `immutable.json` для reddit-app, в котором создан systemd-сервис с приложением.
+- Создан скрипт create-rddit-vm.sh, создающий ВМ из baked образа
