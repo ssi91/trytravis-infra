@@ -1,0 +1,19 @@
+[Unit]
+Description=RedditUnit
+After=network.target
+# After=mongod.service
+# Requires=mongod.service
+
+[Service]
+Type=simple
+# PIDFile=/home/ubuntu/reddit_service.pid
+# User=ubuntu
+# Group=ubuntu
+WorkingDirectory=/home/ubuntu/reddit
+ExecStart=/bin/bash -c '/usr/local/bin/puma'
+KillMode=mixed
+# TimeoutSec=300
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

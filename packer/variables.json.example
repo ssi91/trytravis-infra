@@ -1,0 +1,5 @@
+{
+	"folder_id": "fsfgk3lh4l14o2l4ujhc5",
+	"source_image_family": "ubuntu-1604-lts",
+	"service_account_key_file": "files/fake_key.json"
+}
