@@ -32,6 +32,6 @@ variable private_key_path {
 }
 
 variable counts {
-	description = "Count of instances"
-	default = 1
+  description = "Count of instances"
+  default     = 1
 }
