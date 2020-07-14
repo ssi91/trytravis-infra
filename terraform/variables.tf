@@ -35,3 +35,13 @@ variable counts {
   description = "Count of instances"
   default     = 1
 }
+
+variable app_disk_image {
+  description = "App Image"
+  default     = "reddit-app-base"
+}
+
+variable db_disk_image {
+  description = "Data Base Image"
+  default     = "reddit-db-base"
+}
