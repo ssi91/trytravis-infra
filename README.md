@@ -66,3 +66,6 @@ yc compute instance create \
 ## HW #7
 - настроенный окружения stage и prod в terraform
 - добавлены модули для переисподьзования конфигураций образов VM
+
+### Дополнительно
+- установлен удалённый backend terraform'а через Yandex Object Storage
