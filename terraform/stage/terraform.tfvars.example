@@ -1,0 +1,9 @@
+cloud_id                 = "b1gkjvr337absfviqtgvo"
+folder_id                = "b1gk3lh4l1d4o2l4ujhc5"
+zone                     = "ru-central1-a"
+image_id                 = "fd82abb562msglkvo395a"
+public_key_path          = "~/.ssh/key.pub"
+subnet_id                = "e9buvost0ruoqtub3l1g"
+service_account_key_file = "key.json"
+private_key_path         = "~/.ssh/key"
+counts = 2
