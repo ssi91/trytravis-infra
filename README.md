@@ -69,3 +69,10 @@ yc compute instance create \
 
 ### Дополнительно
 - установлен удалённый backend terraform'а через Yandex Object Storage
+
+## HW #8
+- Установлен ansible из `pip`
+- Добавлены inventory файлы в `INI` и `yaml` форматах
+- Создан конфиг `ansible.cfg`
+- Создан playbook `clone.yml`
+  - В playbook'е есть `task`, который не указан в задании, для установки `git`, которого изначально нет на ВМ
