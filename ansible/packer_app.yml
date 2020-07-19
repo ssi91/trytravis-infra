@@ -1,0 +1,11 @@
+- name: Install dependencies
+  hosts: default
+  tasks:
+  - name: Apt Ruby and Bundler
+    become: true
+    apt:
+      update_cache: yes
+      name:
+      - ruby-full
+      - ruby-bundler
+      - build-essential
