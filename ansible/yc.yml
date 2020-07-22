@@ -1,0 +1,9 @@
+plugin: yc_compute
+keyed_groups:
+  - key: labels['tags']
+    separator: ""
+compose:
+  ansible_host: network_interfaces[0].primary_v4_address.one_to_one_nat.address
+folders:
+  - b1gk3lh4l14o2l4ujhc5
+auth_kind: serviceaccountfile
