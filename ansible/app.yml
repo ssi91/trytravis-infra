@@ -1,0 +1,26 @@
+- name: Configure App
+  hosts: app
+  become: true
+  vars:
+    db_host: 10.130.0.23
+  tasks:
+  - name: Add unit file for Puma
+    copy:
+      src: files/puma.service
+      dest: /etc/systemd/system/puma.service
+    notify: reload puma
+  - name: Add config for db connection
+    template:
+      src: files/db_config.j2
+      dest: /home/ubuntu/db_config
+      owner: ubuntu
+      group: ubuntu
+  - name: enable puma
+    service:
+      name: puma
+      enabled: yes
+  handlers:
+  - name: reload puma
+    service:
+      name: puma
+      state: restarted

@@ -1,0 +1,29 @@
+- name: Install MongoDB
+  hosts: default
+  become: true
+  tasks:
+  - name: Install apt-transport-https
+    apt:
+      update_cache: yes
+      name:
+      - apt-transport-https
+  - name: Add Mongo repo key
+    apt_key:
+      url: https://www.mongodb.org/static/pgp/server-4.2.asc
+      state: present
+  - name: Add repo into sources list
+    apt_repository:
+      repo: deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.2 multiverse
+      state: present
+  - name: Install MongoDB
+    apt:
+      update_cache: yes
+      name: mongodb-org
+  - name: Start Mongo
+    service:
+      name: mongod
+      state: started
+  - name: Enable Mongo
+    service:
+      name: mongod
+      enabled: yes
