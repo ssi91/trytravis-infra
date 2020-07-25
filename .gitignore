@@ -9,3 +9,6 @@ key.json
 .terraform/
 
 *.retry
+
+# external ansible roles
+jdauphant.nginx
