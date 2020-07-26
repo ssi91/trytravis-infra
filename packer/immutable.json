@@ -2,7 +2,7 @@
 	"builders": [
 		{
 			"type": "yandex",
-			"service_account_key_file": "key.json",
+			"service_account_key_file": "{{user `service_account_key_file`}}",
 			"folder_id": "b1gk3lh4l14o2l4ujhc5",
 			"source_image_family": "ubuntu-1604-lts",
 			"image_name": "reddit-full-{{timestamp}}",
@@ -16,23 +16,23 @@
 	"provisioners": [
 		{
 			"type": "shell",
-			"script": "scripts/install_ruby.sh",
+			"script": "packer/scripts/install_ruby.sh",
 			"execute_command": "sudo {{.Path}}"
 		},
 		{
 			"type": "shell",
-			"script": "scripts/install_mongodb.sh",
+			"script": "packer/scripts/install_mongodb.sh",
 			"execute_command": "sudo {{.Path}}"
 		},
 		{
 			"type": "file",
-			"source": "files/reddit.service",
+			"source": "packer/files/reddit.service",
 			"destination": "/home/ubuntu/reddit.service"
 
 		},
 		{
 			"type": "shell",
-			"script": "files/setup_reddit_service.sh",
+			"script": "packer/files/setup_reddit_service.sh",
 			"execute_command": "sudo {{.Path}}"
 		}
 	]
